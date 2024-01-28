@@ -24,6 +24,11 @@ class Image:
     def rescale_root(self,root):
         self.rescaled_data = self.rescaled_data**(root)
         return self
+
+
+    def rescale_exp(self,scale=1):
+        self.rescaled_data = np.exp(self.rescaled_data*scale)
+        return self
         
     
     def rotate_transpose(self):
