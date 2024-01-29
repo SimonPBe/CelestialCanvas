@@ -20,4 +20,21 @@ def test_image_normalize():
     assert norm_data.max()==1
 
 
+def test_rescale_root():
+    pass
 
+
+def test_rotate_transpose():
+    pass
+
+def test_rotate_right():
+    pass
+
+def test_rotate_left():
+    pass
+
+def test_flip_updown():
+    pass
+
+def test_flip_leftright():
+    pass
