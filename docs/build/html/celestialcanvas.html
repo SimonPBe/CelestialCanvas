@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Celestial Canvas &mdash; CelestialCanvas  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to CelestialCanvas’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            CelestialCanvas
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Celestial Canvas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#composite.Composite"><code class="docutils literal notranslate"><span class="pre">Composite</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#composite.Composite.plot"><code class="docutils literal notranslate"><span class="pre">Composite.plot()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#image.Image"><code class="docutils literal notranslate"><span class="pre">Image</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#image.Image.flip_leftright"><code class="docutils literal notranslate"><span class="pre">Image.flip_leftright()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#image.Image.flip_updown"><code class="docutils literal notranslate"><span class="pre">Image.flip_updown()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#image.Image.normalize"><code class="docutils literal notranslate"><span class="pre">Image.normalize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#image.Image.plot"><code class="docutils literal notranslate"><span class="pre">Image.plot()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#image.Image.rescale_root"><code class="docutils literal notranslate"><span class="pre">Image.rescale_root()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#image.Image.reset"><code class="docutils literal notranslate"><span class="pre">Image.reset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#image.Image.rotate_transpose"><code class="docutils literal notranslate"><span class="pre">Image.rotate_transpose()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CelestialCanvas</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Celestial Canvas</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/celestialcanvas.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="celestial-canvas">
+<span id="celestialcanvas"></span><h1>Celestial Canvas<a class="headerlink" href="#celestial-canvas" title="Link to this heading"></a></h1>
+<p>Package to create composite images from astronomical data</p>
+<dl class="py class" id="module-composite">
+<dt class="sig sig-object py" id="composite.Composite">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">composite.</span></span><span class="sig-name descname"><span class="pre">Composite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">red</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">green</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#composite.Composite" title="Link to this definition"></a></dt>
+<dd><p>Composite Image created using three Image objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>red</strong> (<em>array</em>) – array containing data of the red channel in the image</p></li>
+<li><p><strong>green</strong> (<em>array</em>) – array containing data of the green channel in the image</p></li>
+<li><p><strong>blue</strong> (<em>array</em>) – array containing data of the blue channel in the image</p></li>
+<li><p><strong>comp</strong> (<em>array</em>) – array containing the data of the red, green and blue channels stacked depth wise</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="composite.Composite.plot">
+<span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#composite.Composite.plot" title="Link to this definition"></a></dt>
+<dd><p>Plots the constructed composite image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>title</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – String containing the title of the image.
+Defaults to an empty string</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class" id="module-image">
+<dt class="sig sig-object py" id="image.Image">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">image.</span></span><span class="sig-name descname"><span class="pre">Image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#image.Image" title="Link to this definition"></a></dt>
+<dd><p>Image object containing the data of one color.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>array</em>) – array containing data of the image whenit was initialized. Used for reset.</p></li>
+<li><p><strong>rescaled_data</strong> (<em>array</em>) – array containing data of iamge after it was modified.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="image.Image.flip_leftright">
+<span class="sig-name descname"><span class="pre">flip_leftright</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.Image.flip_leftright" title="Link to this definition"></a></dt>
+<dd><p>Flips the data of the image along the 1 axis (left/right)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>An Image object that was flipped left to right</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#image.Image" title="image.Image">Image</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="image.Image.flip_updown">
+<span class="sig-name descname"><span class="pre">flip_updown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.Image.flip_updown" title="Link to this definition"></a></dt>
+<dd><p>Flips the data of the image along the 0 axis (up/down)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>An Image object that was flipped upside</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#image.Image" title="image.Image">Image</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="image.Image.normalize">
+<span class="sig-name descname"><span class="pre">normalize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.Image.normalize" title="Link to this definition"></a></dt>
+<dd><p>Normalizes the data of the image using the maximum and minimum values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>An Image object that was normalized</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#image.Image" title="image.Image">Image</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="image.Image.plot">
+<span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#image.Image.plot" title="Link to this definition"></a></dt>
+<dd><p>Plots the constructed composite image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>title</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – String containing the title of the image.
+Defaults to an empty string</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="image.Image.rescale_root">
+<span class="sig-name descname"><span class="pre">rescale_root</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#image.Image.rescale_root" title="Link to this definition"></a></dt>
+<dd><p>Rescales the data by taking the power using 1/root</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>root</strong> (<em>float</em>) – root used for the rescaling</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An Image object that was rescaled using the root parameter</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#image.Image" title="image.Image">Image</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="image.Image.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.Image.reset" title="Link to this definition"></a></dt>
+<dd><p>Resets recaled_data to data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>An Image object were recaled_data was reset to data</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#image.Image" title="image.Image">Image</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="image.Image.rotate_transpose">
+<span class="sig-name descname"><span class="pre">rotate_transpose</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#image.Image.rotate_transpose" title="Link to this definition"></a></dt>
+<dd><p>Rotates the data of the image by transposing it</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>An Image object that was rotated by transposing it</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#image.Image" title="image.Image">Image</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to CelestialCanvas’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Marco Janach, Simon Benke.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
