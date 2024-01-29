@@ -13,7 +13,7 @@ def test_reset():
     assert np.all(rand_img.rescaled_data == random_img_data)
 
 def test_image_normalize():
-    random_img_data = np.random.rand(10,10)#random something
+    random_img_data = np.random.rand(10,10)
     rand_img = Image(random_img_data)
     norm_data = rand_img.normalize().rescaled_data
     assert norm_data.min()==0
@@ -21,20 +21,40 @@ def test_image_normalize():
 
 
 def test_rescale_root():
-    pass
+    assert False
 
+test_image = np.array([[1,2,3],
+                       [4,5,6],
+                       [7,8,9]])
 
 def test_rotate_transpose():
-    pass
+    img = Image(test_image)
+    transposed_image = np.array([[1,4,7],[2,5,8],[3,6,9]])
+    img.rotate_transpose()
+    assert(np.all(img.rescaled_data==transposed_image))
+
 
 def test_rotate_right():
-    pass
+    #img_data = 
+    img = Image(test_image)
+    rotated_img = np.array([[7,4,1],[8,5,2],[9,6,3]])
+    img.rotate_right()
+    assert(np.all(img.rescaled_data==rotated_img))
 
 def test_rotate_left():
-    pass
+    img = Image(test_image)
+    rotated_img = np.array([[3,6,9],[2,5,8],[1,4,7]])
+    img.rotate_left()
+    assert(np.all(img.rescaled_data==rotated_img))
 
 def test_flip_updown():
-    pass
+    img = Image(test_image)
+    flipped_img = np.array([[7,8,9],[4,5,6],[1,2,3]])
+    img.flip_updown()
+    assert(np.all(img.rescaled_data==flipped_img))
 
 def test_flip_leftright():
-    pass
+    img = Image(test_image)
+    flipped_img = np.array([[3,2,1],[6,5,4],[9,8,7]])
+    img.flip_leftright()
+    assert(np.all(img.rescaled_data==flipped_img))
