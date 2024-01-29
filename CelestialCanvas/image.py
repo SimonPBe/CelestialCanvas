@@ -66,7 +66,26 @@ class Image:
         self.rescaled_data = self.rescaled_data.transpose()
         return self
         
-    
+    def rotate_left(self):
+        """Rotates the data of the image 90 degrees to the left
+
+        Returns:
+            Image: An Image object that was rotated counterclockwise by 90 degrees
+        
+        """
+        self.rescaled_data = np.rot90(self.rescaled_data)
+
+
+    def rotate_right(self):
+        """Rotates the data of the image 90 degrees to the left
+
+        Returns:
+            Image: An Image object that was rotated counterclockwise by 90 degrees
+        
+        """
+        self.rescaled_data = np.rot90(self.rescaled_data,-1)
+
+
     def flip_updown(self):
         """Flips the data of the image along the 0 axis (up/down)
 
