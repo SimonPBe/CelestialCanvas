@@ -58,3 +58,9 @@ def test_flip_leftright():
     flipped_img = np.array([[3,2,1],[6,5,4],[9,8,7]])
     img.flip_leftright()
     assert(np.all(img.rescaled_data==flipped_img))
+
+    def test_rescale_log():
+        test_img_data = np.array([[0,1,2,3],[5,6,7,8]])
+        img = Image(np.exp(test_img_data))
+        img.rescale_log()
+        assert(np.all(img.rescaled_data==test_img_data))
