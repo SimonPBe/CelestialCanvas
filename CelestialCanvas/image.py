@@ -22,7 +22,7 @@ class Image:
         """Resets recaled_data to data.
 
         Returns:
-            Image: An Image object were recaled_data was reset to data
+            Image: An Image object were rescaled_data was reset to data
         
         """
         self.rescaled_data = self.data
