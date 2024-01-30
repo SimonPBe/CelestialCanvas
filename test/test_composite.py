@@ -15,7 +15,7 @@ def test_composite_init():
     #test that composite creates a correct composite image
     pass
 
-"""
+
 @patch('matplotlib.pyplot.figure')
 def test_plot_doesnt_change_data(mock_show):
     rand_image_data = np.random.rand(10,10)
@@ -28,4 +28,4 @@ def test_plot_doesnt_change_data(mock_show):
     comp_img.plot()
     assert(np.all(rand_image_data == comp_img.red.rescaled_data))
     assert(np.all(rand_image_data2 == comp_img.green.rescaled_data))
-    assert(np.all(rand_image_data3 == comp_img.blue.rescaled_data))"""
+    assert(np.all(rand_image_data3 == comp_img.blue.rescaled_data))
