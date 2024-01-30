@@ -52,7 +52,7 @@ class Image:
             Image: An Image object that was rescaled using the root parameter
         
         """
-        self.rescaled_data = self.rescaled_data**(1/root)
+        self.rescaled_data = self.rescaled_data**(1./root)
         return self
     
     def rescale_log(self):

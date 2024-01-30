@@ -28,7 +28,7 @@ class Composite:
                 Defaults to an empty string
 
         """
-        pre_norm_vals = self.red.rescaled_data,self.green.rescaled_data,self.blue.rescaled_data
+        #pre_norm_vals = self.red.rescaled_data,self.green.rescaled_data,self.blue.rescaled_data
 
         self.comp = np.dstack((self.red.normalize().rescaled_data,self.green.normalize().rescaled_data,self.blue.normalize().rescaled_data))
         
@@ -38,7 +38,7 @@ class Composite:
         plt.xlabel('X-axis')  # Set the label for the x-axis
         plt.ylabel('Y-axis')  # Set the label for the y-axis
         plt.show()
-        self.red.rescaled_data,self.green.rescaled_data,self.blue.rescaled_data = pre_norm_vals
+        #[self.red.rescaled_data,self.green.rescaled_data,self.blue.rescaled_data] = pre_norm_vals
 
 
 
