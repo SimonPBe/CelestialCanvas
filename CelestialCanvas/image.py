@@ -66,6 +66,17 @@ class Image:
         self.rescaled_data = np.log(1+self.rescaled_data)
         return self
         
+    def rescale_custom(self,func):
+        """Rescales the data by using a given custom function
+
+        Args:
+            func (function): function used for the rescaling 
+
+        Returns:
+            Image: An Image object that was rescaled using the function
+        """
+        self.rescaled_data = func(self.rescaled_data)
+        return self
     
     def rotate_transpose(self):
         """Rotates the data of the image by transposing it
@@ -85,6 +96,7 @@ class Image:
         
         """
         self.rescaled_data = np.rot90(self.rescaled_data)
+        return self
 
 
     def rotate_right(self):
@@ -95,6 +107,7 @@ class Image:
         
         """
         self.rescaled_data = np.rot90(self.rescaled_data,-1)
+        return self
 
 
     def flip_updown(self):
