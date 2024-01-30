@@ -54,6 +54,17 @@ class Image:
         """
         self.rescaled_data = self.rescaled_data**(1/root)
         return self
+    
+    def rescale_log(self):
+        """Rescales the data using the logarithm function (using log(1+data))
+
+
+        Returns:
+            Image: An Image object that was rescaled using the root parameter
+        
+        """
+        self.rescaled_data = np.log(1+self.rescaled_data)
+        return self
         
     
     def rotate_transpose(self):
