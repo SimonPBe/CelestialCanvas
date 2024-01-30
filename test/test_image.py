@@ -1,5 +1,5 @@
 import sys
-sys.path.append("C:/Users/muzu2/Desktop/OpenSourceS/CelestialCanvas")
+#sys.path.append("C:/Users/muzu2/Desktop/OpenSourceS/CelestialCanvas")
 from CelestialCanvas.image import Image
 import numpy as np
 
