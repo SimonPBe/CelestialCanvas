@@ -21,7 +21,13 @@ def test_image_normalize():
 
 
 def test_rescale_root():
-    assert False
+    test_image =  np.array([[4,9],[16,25]])
+    root_img = np.array([[2,3],[4,5]])
+    img = Image(test_image)
+    img.rescale_root(2)
+    assert(np.all(root_img==img.rescaled_data))
+
+    
 
 test_image = np.array([[1,2,3],
                        [4,5,6],
