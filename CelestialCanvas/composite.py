@@ -64,7 +64,7 @@ class Composite:
         return self
     
     def rescale_log(self):
-        """Rescales the data of all three images using the logarithm function
+        """Rescales the data of all three images using the logarithm function using log(1+x)
 
         Returns:
             Composite: A Composite object were all images were rescaled using the logarithm
